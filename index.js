@@ -1,14 +1,21 @@
-var lotNumbers = [1, 15, 24, 35, 48, 3]
+var lotNumbers = [1, 15, 24, 35, 48, 3];
 
 function init() {
     writeLotteryArray(lotNumbers, "goal");
-    pick = [];
-    for (var i = 0; i < 5; i++) {
-        pick.push(1 + Math.floor(Math.random() * 47));
+    pick = new Set();
+    var i = 0;
+    while (i < 5) {
+
+        curr = 1 + Math.floor(Math.random() * 47);
+        while (pick.has(curr)) {
+            curr = 1 + Math.floor(Math.random() * 47);
+        }
+        pick.add(curr);
+        i++;
     }
-    console.log(pick);
+    pick = Array.from(pick);
     pick.sort((a, b) => a - b);
-    console.log(pick);
+
 
     pick.push(1 + Math.floor(Math.random() * 17));
     writeLotteryArray(pick, "pick");
@@ -19,7 +26,7 @@ function init() {
 function writeLotteryArray(arr, elemID) {
     elem = document.getElementById(elemID);
     elem.innerHTML = "<div class=\"pad \"></div>";
-    var i = 0
+    var i = 0;
     for (; i < 5; i++) {
         ins = "";
         if (arr[i] < 10) {
@@ -42,8 +49,10 @@ function calcPayoff(pick) {
     luckyMatch = pick[5] == lotNumbers[5];
     match = 0;
     for (var i = 0; i < 5; i++) {
-        if (pick[i] == lotNumbers[i]) {
-            match++;
+        for (var j = 0; j < 5; j++) {
+            if (pick[i] == lotNumbers[j]) {
+                match++;
+            }
         }
     }
     if (luckyMatch) {
