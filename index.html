@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mass Lottery's Lucky for Life</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="index.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="topnav">
+        <h1>Lucky for LIFE!</h1>
+    </div>
+    <div class="row">
+        <div class="column1">
+            <h2>Today's Lucky Numbers:</h2>
+        </div>
+    </div>
+    <div class="row" id="goal">
+    </div>
+    <div class="row">
+        <div class="column1">
+            <h2>Your Pick:</h2>
+        </div>
+    </div>
+    <div class="row" id="pick">
+    </div>
+    <div class="row">
+        <div class="column1" id="pay">
+
+        </div>
+        <form onSubmit="JavaScript:init()">
+            <input type="submit" value="Pick Again">
+        </form>
+    </div>
+
+</body>
+
+</html>

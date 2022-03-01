@@ -1,0 +1,111 @@
+:root {
+    --light-bg: #000;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    color: var(--light-bg);
+    margin-bottom: 0%;
+}
+
+p {
+    font-size: 22px;
+    color: hsl(120, 61%, 75%);
+}
+
+h2 {
+    font-size: 45px;
+    font-family: 'Garamond';
+}
+
+a {
+    color: var(--light-bg);
+    padding: px;
+}
+
+a:hover {
+    color: #279f27;
+}
+
+.pad {
+    background: none;
+    float: left;
+    width: 35.5%;
+    padding: 1%;
+    margin: 0.5%;
+}
+
+.numb {
+    background: none;
+    float: left;
+    width: ch;
+    height: ex;
+    padding: 1%;
+    margin: 0.5%;
+    border: 1px solid black;
+    border-radius: 10ex;
+    text-align: center;
+}
+
+.lucky {
+    background: #ff0000;
+    float: left;
+    width: ch;
+    height: ex;
+    padding: 1%;
+    margin: 0.5%;
+    border: 1px solid black;
+    border-radius: 10ex;
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    background-color: #eee;
+    font-family: verdana;
+    margin: 0px;
+}
+
+.header {
+    background-image: url('header.png');
+    background-size: 100vw;
+    padding: 20px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'verdana';
+}
+
+.topnav h1 {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.column1 {
+    background: none;
+    text-align: center;
+    width: 98%;
+    padding: 1%;
+    margin: 0.5%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=submit] {
+    width: 20%;
+    margin-left: 40%;
+}
